@@ -1,0 +1,30 @@
+From 2db8929d499515dd55b24c109d6f96ef547a4002 Mon Sep 17 00:00:00 2001
+From: Ij-Israfil <israfilkhan494@gmail.com>
+Date: Mon, 13 Oct 2025 07:11:04 +0000
+Subject: [PATCH] [Patch] Fix dt2w mic permission issue
+
+---
+ .../com/android/server/policy/PhoneWindowManager.java     | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/services/core/java/com/android/server/policy/PhoneWindowManager.java b/services/core/java/com/android/server/policy/PhoneWindowManager.java
+index a18314a..0f66ed1 100644
+--- a/services/core/java/com/android/server/policy/PhoneWindowManager.java
++++ b/services/core/java/com/android/server/policy/PhoneWindowManager.java
+@@ -5976,14 +5976,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
+                 break;
+             }
+ 
+-            case KeyEvent.KEYCODE_MUTE:
+-                result &= ~ACTION_PASS_TO_USER;
+-                if (down && event.getRepeatCount() == 0) {
+-                    notifyKeyGestureCompleted(event,
+-                            KeyGestureEvent.KEY_GESTURE_TYPE_SYSTEM_MUTE);
+-                    toggleMicrophoneMuteFromKey();
+-                }
+-                break;
+             case KeyEvent.KEYCODE_MEDIA_PLAY:
+             case KeyEvent.KEYCODE_MEDIA_PAUSE:
+             case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
+-- 
+2.50.1
