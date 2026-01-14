@@ -1,3 +1,12 @@
-Date - 14-01-2025
-=================
-- Bump security string to January 2026
+{
+        "response": [
+                {
+                        "filename": "Project_Infinity-X-3.5.1-RMX1901-13.01.2026-GAPPS-UNOFFICIAL.zip",
+                        "download": "https://github.com/ij-israfil/crave_aosp_builder/releases/download/Project-Infinity-X/Project_Infinity-X-3.5.1-RMX1901-13.01.2026-GAPPS-UNOFFICIAL.zip",
+                        "timestamp": 1768357876,
+                        "md5": "f596f1213b2f01194ca1ab17b322df9e",
+                        "size": 1754344374,
+                        "version": "3.5.1"
+                }
+        ]
+}
